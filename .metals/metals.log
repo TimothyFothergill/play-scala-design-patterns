@@ -1,0 +1,316 @@
+2024.10.25 13:37:54 INFO  Started: Metals version 1.4.0 in folders '/home/hmrc/Development/play-scala-design-patterns' for client Visual Studio Code 1.94.2.[0m
+2024.10.25 13:37:55 WARN  Flyway upgrade recommended: H2 2.3.232 is newer than this version of Flyway and support has not been tested. The latest supported version of H2 is 2.2.224.[0m
+2024.10.25 13:38:02 INFO  running '/usr/bin/sbt -Dbloop.export-jar-classifiers=sources bloopInstall'[0m
+2024.10.25 13:38:02 WARN  no build target for: /home/hmrc/Development/play-scala-design-patterns/project/metals.sbt[0m
+2024.10.25 13:38:02 INFO  no build target found for /home/hmrc/Development/play-scala-design-patterns/project/metals.sbt. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2024.10.25 13:38:03 ERROR [info] [launcher] getting org.scala-sbt sbt 1.10.3  (this may take some time)...[0m
+Oct 25, 2024 1:38:05 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+2024.10.25 13:38:07 ERROR [info] [launcher] getting Scala 2.12.20 (for sbt)...[0m
+2024.10.25 13:38:09 INFO  [info] welcome to sbt 1.10.3 (Amazon.com Inc. Java 11.0.21)[0m
+2024.10.25 13:38:10 INFO  [info] loading global plugins from /home/hmrc/.sbt/1.0/plugins[0m
+2024.10.25 13:38:15 INFO  [info] loading settings for project play-scala-design-patterns-build-build-build from metals.sbt ...[0m
+2024.10.25 13:38:15 INFO  [info] loading project definition from /home/hmrc/Development/play-scala-design-patterns/project/project/project[0m
+2024.10.25 13:38:17 INFO  [info] loading settings for project play-scala-design-patterns-build-build from metals.sbt ...[0m
+2024.10.25 13:38:17 INFO  [info] loading project definition from /home/hmrc/Development/play-scala-design-patterns/project/project[0m
+2024.10.25 13:38:19 INFO  [success] Generated .bloop/play-scala-design-patterns-build-build.json[0m
+2024.10.25 13:38:19 INFO  [success] Total time: 2 s, completed 25 Oct 2024, 13:38:19[0m
+2024.10.25 13:38:21 INFO  [info] loading settings for project play-scala-design-patterns-build from metals.sbt,plugins.sbt ...[0m
+2024.10.25 13:38:21 INFO  [info] loading project definition from /home/hmrc/Development/play-scala-design-patterns/project[0m
+2024.10.25 13:38:23 INFO  [success] Generated .bloop/play-scala-design-patterns-build.json[0m
+2024.10.25 13:38:23 INFO  [success] Total time: 2 s, completed 25 Oct 2024, 13:38:23[0m
+2024.10.25 13:38:26 INFO  [info] loading settings for project root from build.sbt ...[0m
+2024.10.25 13:38:26 INFO  [info]   __              __[0m
+2024.10.25 13:38:26 INFO  [info]   \ \     ____   / /____ _ __  __[0m
+2024.10.25 13:38:26 INFO  [info]    \ \   / __ \ / // __ `// / / /[0m
+2024.10.25 13:38:26 INFO  [info]    / /  / /_/ // // /_/ // /_/ /[0m
+2024.10.25 13:38:26 INFO  [info]   /_/  / .___//_/ \__,_/ \__, /[0m
+2024.10.25 13:38:26 INFO  [info]       /_/               /____/[0m
+2024.10.25 13:38:26 INFO  [info] [0m
+2024.10.25 13:38:26 INFO  [info] Version 3.0.5 running Java 11.0.21[0m
+2024.10.25 13:38:26 INFO  [info] [0m
+2024.10.25 13:38:26 INFO  [info] Play is run entirely by the community. Please consider contributing and/or donating:[0m
+2024.10.25 13:38:26 INFO  [info] https://www.playframework.com/sponsors[0m
+2024.10.25 13:38:26 INFO  [info] [0m
+2024.10.25 13:38:28 INFO  [success] Generated .bloop/root.json[0m
+2024.10.25 13:38:28 INFO  [success] Generated .bloop/root-test.json[0m
+2024.10.25 13:38:28 INFO  [success] Total time: 2 s, completed 25 Oct 2024, 13:38:28[0m
+2024.10.25 13:38:29 INFO  time: ran 'sbt bloopInstall' in 26s[0m
+2024.10.25 13:38:29 INFO  Attempting to connect to the build server...[0m
+2024.10.25 13:38:29 INFO  Found a Bloop server running[0m
+2024.10.25 13:38:29 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/hmrc/Development/play-scala-design-patterns/.metals/bsp.trace.json or /home/hmrc/.cache/metals/bsp.trace.json[0m
+2024.10.25 13:38:29 INFO  Attempting to connect to the build server...[0m
+2024.10.25 13:38:29 INFO  Found a Bloop server running[0m
+2024.10.25 13:38:29 INFO  Attempting to connect to the build server...[0m
+2024.10.25 13:38:29 INFO  Found a Bloop server running[0m
+2024.10.25 13:38:29 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/hmrc/Development/play-scala-design-patterns/project/project/.metals/bsp.trace.json or /home/hmrc/.cache/metals/bsp.trace.json[0m
+2024.10.25 13:38:29 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/hmrc/Development/play-scala-design-patterns/project/.metals/bsp.trace.json or /home/hmrc/.cache/metals/bsp.trace.json[0m
+2024.10.25 13:38:29 INFO  time: Connected to build server in 1.16s[0m
+2024.10.25 13:38:29 INFO  Connected to Build server: Bloop v2.0.3[0m
+2024.10.25 13:38:30 INFO  running doctor check[0m
+2024.10.25 13:38:30 INFO  java targets: play-scala-design-patterns-build, play-scala-design-patterns-build-build, root-test, root[0m
+2024.10.25 13:38:35 WARN  Flyway upgrade recommended: H2 2.3.232 is newer than this version of Flyway and support has not been tested. The latest supported version of H2 is 2.2.224.[0m
+2024.10.25 13:39:01 INFO  time: indexed workspace in 30s[0m
+2024.10.25 13:49:20 INFO  compiling root (8 scala sources and 1 java source)[0m
+2024.10.25 13:49:28 WARN  Unexpected javac output: WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by com.sourcegraph.shaded.com.sourcegraph.semanticdb_javac.SemanticdbJavacOptions (file:/home/hmrc/.cache/bloop/semanticdb/com.sourcegraph.semanticdb-javac.0.10.3/semanticdb-javac-0.10.3.jar) to method com.sun.tools.javac.api.BasicJavacTask.getContext()
+WARNING: Please consider reporting this to the maintainers of com.sourcegraph.shaded.com.sourcegraph.semanticdb_javac.SemanticdbJavacOptions
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release.[0m
+2024.10.25 13:49:28 INFO  time: compiled root in 8.69s[0m
+2024.10.25 13:52:20 INFO  compiling root (1 scala source)[0m
+2024.10.25 13:52:20 INFO  time: compiled root in 0.8s[0m
+2024.10.25 13:52:42 INFO  compiling root (1 scala source)[0m
+2024.10.25 13:52:42 INFO  time: compiled root in 0.68s[0m
+2024.10.25 13:53:35 INFO  compiling root (1 scala source)[0m
+2024.10.25 13:53:35 INFO  time: compiled root in 0.89s[0m
+2024.10.25 13:56:16 INFO  compiling root (1 scala source)[0m
+2024.10.25 13:56:16 INFO  time: compiled root in 0.74s[0m
+2024.10.25 13:57:09 INFO  compiling root (1 scala source)[0m
+2024.10.25 13:57:09 INFO  time: compiled root in 0.45s[0m
+Oct 25, 2024 1:57:19 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 47
+2024.10.25 13:57:20 INFO  compiling root (1 scala source)[0m
+2024.10.25 13:57:20 INFO  time: compiled root in 0.85s[0m
+2024.10.25 13:57:24 INFO  compiling root (1 scala source)[0m
+2024.10.25 13:57:24 INFO  time: compiled root in 0.6s[0m
+2024.10.25 13:57:30 INFO  compiling root (3 scala sources)[0m
+2024.10.25 13:57:32 INFO  time: compiled root in 1.4s[0m
+2024.10.25 13:57:32 INFO  compiling root (1 java source)[0m
+2024.10.25 13:57:33 WARN  Unexpected javac output: WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by com.sourcegraph.shaded.com.sourcegraph.semanticdb_javac.SemanticdbJavacOptions (file:/home/hmrc/.cache/bloop/semanticdb/com.sourcegraph.semanticdb-javac.0.10.3/semanticdb-javac-0.10.3.jar) to method com.sun.tools.javac.api.BasicJavacTask.getContext()
+WARNING: Please consider reporting this to the maintainers of com.sourcegraph.shaded.com.sourcegraph.semanticdb_javac.SemanticdbJavacOptions
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release.[0m
+2024.10.25 13:57:33 INFO  time: compiled root in 1.48s[0m
+2024.10.25 14:00:03 INFO  compiling root (1 scala source)[0m
+2024.10.25 14:00:05 INFO  time: compiled root in 2.74s[0m
+2024.10.25 14:03:45 INFO  compiling root (1 scala source)[0m
+2024.10.25 14:03:45 INFO  time: compiled root in 0.52s[0m
+2024.10.25 14:04:09 INFO  compiling root (1 scala source)[0m
+2024.10.25 14:04:09 INFO  time: compiled root in 0.38s[0m
+2024.10.25 14:25:42 INFO  compiling root (1 scala source)[0m
+2024.10.25 14:25:42 INFO  time: compiled root in 0.21s[0m
+2024.10.25 14:25:56 INFO  compiling root (1 scala source)[0m
+2024.10.25 14:25:56 INFO  time: compiled root in 60ms[0m
+2024.10.25 14:25:58 INFO  compiling root (1 scala source)[0m
+2024.10.25 14:25:58 INFO  time: compiled root in 95ms[0m
+2024.10.25 14:26:05 INFO  compiling root (1 scala source)[0m
+2024.10.25 14:26:05 INFO  time: compiled root in 0.13s[0m
+2024.10.25 14:26:09 INFO  time: compiled root in 7ms[0m
+2024.10.25 14:26:11 INFO  compiling root (1 scala source)[0m
+2024.10.25 14:26:11 INFO  time: compiled root in 61ms[0m
+2024.10.25 14:26:46 INFO  compiling root (1 scala source)[0m
+2024.10.25 14:26:46 INFO  time: compiled root in 86ms[0m
+2024.10.25 14:27:01 INFO  compiling root (1 scala source)[0m
+2024.10.25 14:27:01 INFO  time: compiled root in 53ms[0m
+2024.10.25 14:29:31 INFO  compiling root (1 scala source)[0m
+2024.10.25 14:29:31 INFO  time: compiled root in 70ms[0m
+2024.10.25 14:29:31 INFO  compiling root (1 scala source)[0m
+2024.10.25 14:29:31 INFO  time: compiled root in 0.1s[0m
+2024.10.25 14:34:57 INFO  compiling root (1 scala source)[0m
+2024.10.25 14:34:57 INFO  time: compiled root in 0.17s[0m
+2024.10.25 14:35:07 INFO  compiling root (1 scala source)[0m
+2024.10.25 14:35:07 INFO  time: compiled root in 0.13s[0m
+2024.10.25 14:35:08 INFO  compiling root (1 scala source)[0m
+2024.10.25 14:35:08 INFO  time: compiled root in 0.16s[0m
+2024.10.25 14:35:16 INFO  compiling root (1 scala source)[0m
+2024.10.25 14:35:16 INFO  time: compiled root in 89ms[0m
+2024.10.25 14:35:21 INFO  time: compiled root in 6ms[0m
+2024.10.25 14:35:23 ERROR /home/hmrc/Development/play-scala-design-patterns/app/patterns/factorymethod/FactoryMethod.scala
+scala.meta.internal.tokenizers.package$UnexpectedInputEndException
+	at scala.meta.internal.tokenizers.LegacyScanner.$anonfun$nextToken$1(LegacyScanner.scala:172)
+	at scala.Function0.apply$mcV$sp(Function0.scala:42)
+	at scala.meta.internal.tokenizers.LegacyScanner.scala$meta$internal$tokenizers$LegacyScanner$$nextToken(LegacyScanner.scala:178)
+	at scala.meta.internal.tokenizers.LegacyScanner.nextToken(LegacyScanner.scala:172)
+	at scala.meta.internal.mtags.ScalaToplevelMtags$XtensionScanner.mtagsNextToken(ScalaToplevelMtags.scala:73)
+	at scala.meta.internal.mtags.ScalaToplevelMtags.emitMember(ScalaToplevelMtags.scala:754)
+	at scala.meta.internal.mtags.ScalaToplevelMtags.loop(ScalaToplevelMtags.scala:248)
+	at scala.meta.internal.mtags.ScalaToplevelMtags.indexRoot(ScalaToplevelMtags.scala:85)
+	at scala.meta.internal.metals.SemanticdbDefinition$.foreachWithReturnMtags(SemanticdbDefinition.scala:81)
+	at scala.meta.internal.metals.Indexer.indexSourceFile(Indexer.scala:485)
+	at scala.meta.internal.metals.Indexer.$anonfun$reindexWorkspaceSources$3(Indexer.scala:583)
+	at scala.meta.internal.metals.Indexer.$anonfun$reindexWorkspaceSources$3$adapted(Indexer.scala:580)
+	at scala.collection.IterableOnceOps.foreach(IterableOnce.scala:619)
+	at scala.collection.IterableOnceOps.foreach$(IterableOnce.scala:617)
+	at scala.collection.AbstractIterator.foreach(Iterator.scala:1303)
+	at scala.meta.internal.metals.Indexer.reindexWorkspaceSources(Indexer.scala:580)
+	at scala.meta.internal.metals.MetalsLspService.$anonfun$onChange$2(MetalsLspService.scala:946)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.scala:18)
+	at scala.concurrent.Future$.$anonfun$apply$1(Future.scala:687)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:467)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.lang.Thread.run(Thread.java:833)
+[0m
+2024.10.25 14:35:23 INFO  compiling root (1 scala source)[0m
+2024.10.25 14:35:23 INFO  time: compiled root in 71ms[0m
+2024.10.25 14:35:31 INFO  compiling root (1 scala source)[0m
+2024.10.25 14:35:31 INFO  time: compiled root in 92ms[0m
+2024.10.25 14:35:39 INFO  compiling root (1 scala source)[0m
+2024.10.25 14:35:39 INFO  time: compiled root in 64ms[0m
+2024.10.25 14:35:42 INFO  compiling root (1 scala source)[0m
+2024.10.25 14:35:42 INFO  time: compiled root in 82ms[0m
+2024.10.25 14:35:47 INFO  compiling root (1 scala source)[0m
+2024.10.25 14:35:47 INFO  time: compiled root in 65ms[0m
+2024.10.25 14:35:49 INFO  compiling root (1 scala source)[0m
+2024.10.25 14:35:49 INFO  time: compiled root in 79ms[0m
+2024.10.25 14:35:54 INFO  compiling root (1 scala source)[0m
+2024.10.25 14:35:54 INFO  time: compiled root in 0.18s[0m
+2024.10.25 14:35:58 INFO  compiling root (1 scala source)[0m
+2024.10.25 14:35:58 INFO  time: compiled root in 0.15s[0m
+2024.10.25 14:36:01 INFO  compiling root (1 scala source)[0m
+2024.10.25 14:36:01 INFO  time: compiled root in 61ms[0m
+2024.10.25 14:36:03 INFO  compiling root (1 scala source)[0m
+2024.10.25 14:36:03 INFO  time: compiled root in 0.15s[0m
+2024.10.25 14:36:05 INFO  compiling root (1 scala source)[0m
+2024.10.25 14:36:05 INFO  time: compiled root in 0.27s[0m
+2024.10.25 14:36:11 INFO  compiling root (1 scala source)[0m
+2024.10.25 14:36:11 WARN  Could not load snapshot text for /home/hmrc/Development/play-scala-design-patterns/app/patterns/factorymethod/FactoryMethod.scala[0m
+2024.10.25 14:36:11 INFO  time: compiled root in 0.21s[0m
+2024.10.25 14:36:51 INFO  compiling root (1 scala source)[0m
+2024.10.25 14:36:51 INFO  time: compiled root in 0.23s[0m
+2024.10.25 14:37:13 INFO  compiling root (1 scala source)[0m
+2024.10.25 14:37:13 INFO  time: compiled root in 0.24s[0m
+2024.10.25 14:37:17 INFO  compiling root (1 scala source)[0m
+2024.10.25 14:37:17 WARN  Could not load snapshot text for /home/hmrc/Development/play-scala-design-patterns/app/patterns/factorymethod/FactoryMethod.scala[0m
+2024.10.25 14:37:17 INFO  time: compiled root in 0.25s[0m
+2024.10.25 14:37:22 INFO  compiling root (1 scala source)[0m
+2024.10.25 14:37:22 INFO  time: compiled root in 0.1s[0m
+2024.10.25 14:37:36 INFO  compiling root (1 scala source)[0m
+2024.10.25 14:37:36 INFO  time: compiled root in 62ms[0m
+2024.10.25 14:37:39 INFO  compiling root (1 scala source)[0m
+2024.10.25 14:37:39 INFO  time: compiled root in 0.15s[0m
+2024.10.25 14:37:41 INFO  compiling root (1 scala source)[0m
+2024.10.25 14:37:41 INFO  time: compiled root in 62ms[0m
+2024.10.25 14:37:45 INFO  compiling root (1 scala source)[0m
+2024.10.25 14:37:45 INFO  time: compiled root in 90ms[0m
+2024.10.25 14:37:50 INFO  compiling root (1 scala source)[0m
+2024.10.25 14:37:50 INFO  time: compiled root in 95ms[0m
+2024.10.25 14:38:07 INFO  compiling root (1 scala source)[0m
+2024.10.25 14:38:07 INFO  time: compiled root in 0.14s[0m
+2024.10.25 14:38:13 INFO  compiling root (1 scala source)[0m
+2024.10.25 14:38:13 INFO  time: compiled root in 59ms[0m
+2024.10.25 14:38:13 INFO  compiling root (1 scala source)[0m
+2024.10.25 14:38:13 INFO  time: compiled root in 72ms[0m
+2024.10.25 14:38:19 INFO  compiling root (1 scala source)[0m
+2024.10.25 14:38:19 INFO  time: compiled root in 59ms[0m
+2024.10.25 14:38:35 INFO  compiling root (1 scala source)[0m
+2024.10.25 14:38:35 INFO  time: compiled root in 91ms[0m
+2024.10.25 14:38:41 INFO  compiling root (1 scala source)[0m
+2024.10.25 14:38:41 INFO  time: compiled root in 0.11s[0m
+2024.10.25 14:38:46 INFO  compiling root (1 scala source)[0m
+2024.10.25 14:38:46 INFO  time: compiled root in 70ms[0m
+2024.10.25 14:38:48 INFO  compiling root (1 scala source)[0m
+2024.10.25 14:38:48 INFO  time: compiled root in 67ms[0m
+2024.10.25 14:38:51 INFO  compiling root (1 scala source)[0m
+2024.10.25 14:38:51 INFO  time: compiled root in 94ms[0m
+2024.10.25 14:38:54 INFO  compiling root (1 scala source)[0m
+2024.10.25 14:38:54 INFO  time: compiled root in 97ms[0m
+2024.10.25 14:38:56 INFO  compiling root (1 scala source)[0m
+2024.10.25 14:38:56 INFO  time: compiled root in 66ms[0m
+2024.10.25 14:39:08 INFO  compiling root (1 scala source)[0m
+2024.10.25 14:39:08 INFO  time: compiled root in 69ms[0m
+2024.10.25 14:39:25 INFO  compiling root (1 scala source)[0m
+2024.10.25 14:39:25 INFO  time: compiled root in 79ms[0m
+2024.10.25 14:39:26 INFO  compiling root (1 scala source)[0m
+2024.10.25 14:39:26 INFO  time: compiled root in 0.17s[0m
+2024.10.25 14:39:34 INFO  compiling root (1 scala source)[0m
+2024.10.25 14:39:34 INFO  time: compiled root in 0.15s[0m
+2024.10.25 14:39:36 INFO  compiling root (1 scala source)[0m
+2024.10.25 14:39:36 INFO  time: compiled root in 0.13s[0m
+2024.10.25 14:39:52 INFO  compiling root (1 scala source)[0m
+2024.10.25 14:39:52 INFO  time: compiled root in 74ms[0m
+2024.10.25 14:39:56 INFO  time: compiled root in 6ms[0m
+2024.10.25 14:40:03 INFO  compiling root (1 scala source)[0m
+2024.10.25 14:40:03 INFO  time: compiled root in 0.18s[0m
+2024.10.25 14:40:08 INFO  compiling root (1 scala source)[0m
+2024.10.25 14:40:08 INFO  time: compiled root in 0.16s[0m
+2024.10.25 14:40:11 INFO  compiling root (1 scala source)[0m
+2024.10.25 14:40:11 INFO  time: compiled root in 70ms[0m
+2024.10.25 14:40:18 INFO  compiling root (1 scala source)[0m
+2024.10.25 14:40:18 INFO  time: compiled root in 0.17s[0m
+2024.10.25 14:40:22 INFO  compiling root (1 scala source)[0m
+2024.10.25 14:40:22 INFO  time: compiled root in 0.16s[0m
+2024.10.25 14:40:29 INFO  compiling root (1 scala source)[0m
+2024.10.25 14:40:29 INFO  time: compiled root in 0.25s[0m
+2024.10.25 14:40:40 INFO  compiling root (1 scala source)[0m
+2024.10.25 14:40:40 INFO  time: compiled root in 0.17s[0m
+2024.10.25 14:40:42 INFO  compiling root (1 scala source)[0m
+2024.10.25 14:40:42 INFO  time: compiled root in 0.28s[0m
+2024.10.25 14:40:43 INFO  compiling root (1 scala source)[0m
+2024.10.25 14:40:43 INFO  time: compiled root in 0.19s[0m
+2024.10.25 14:40:48 INFO  compiling root (1 scala source)[0m
+2024.10.25 14:40:48 INFO  time: compiled root in 91ms[0m
+2024.10.25 14:40:50 INFO  compiling root (1 scala source)[0m
+2024.10.25 14:40:50 INFO  time: compiled root in 73ms[0m
+2024.10.25 14:40:56 INFO  compiling root (1 scala source)[0m
+2024.10.25 14:40:56 INFO  time: compiled root in 0.2s[0m
+2024.10.25 14:41:08 INFO  compiling root (1 scala source)[0m
+2024.10.25 14:41:08 INFO  time: compiled root in 0.1s[0m
+2024.10.25 14:41:12 INFO  compiling root (1 scala source)[0m
+2024.10.25 14:41:12 INFO  time: compiled root in 80ms[0m
+2024.10.25 14:41:14 INFO  compiling root (1 scala source)[0m
+2024.10.25 14:41:14 INFO  time: compiled root in 0.23s[0m
+2024.10.25 14:41:20 INFO  compiling root (1 scala source)[0m
+2024.10.25 14:41:20 INFO  time: compiled root in 0.16s[0m
+2024.10.25 14:44:15 INFO  compiling root (2 scala sources)[0m
+2024.10.25 14:44:17 INFO  time: compiled root in 1.44s[0m
+2024.10.25 14:44:30 INFO  compiling root (2 scala sources)[0m
+2024.10.25 14:44:31 INFO  time: compiled root in 1.23s[0m
+2024.10.25 14:44:36 INFO  compiling root (2 scala sources)[0m
+2024.10.25 14:44:37 INFO  time: compiled root in 1.24s[0m
+2024.10.25 14:44:48 INFO  compiling root (2 scala sources)[0m
+2024.10.25 14:44:48 INFO  time: compiled root in 0.41s[0m
+2024.10.25 14:45:00 INFO  compiling root (1 scala source)[0m
+2024.10.25 14:45:00 INFO  time: compiled root in 0.38s[0m
+2024.10.25 14:45:19 INFO  compiling root (1 scala source)[0m
+2024.10.25 14:45:19 INFO  time: compiled root in 0.16s[0m
+2024.10.25 14:45:23 INFO  compiling root (1 scala source)[0m
+2024.10.25 14:45:23 INFO  time: compiled root in 96ms[0m
+2024.10.25 14:45:30 INFO  compiling root (1 scala source)[0m
+2024.10.25 14:45:30 INFO  time: compiled root in 60ms[0m
+2024.10.25 14:45:33 INFO  compiling root (1 scala source)[0m
+2024.10.25 14:45:33 INFO  time: compiled root in 71ms[0m
+2024.10.25 14:45:35 INFO  compiling root (1 scala source)[0m
+2024.10.25 14:45:35 INFO  time: compiled root in 74ms[0m
+2024.10.25 14:45:42 INFO  compiling root (1 scala source)[0m
+2024.10.25 14:45:42 INFO  time: compiled root in 67ms[0m
+2024.10.25 14:45:45 INFO  compiling root (1 scala source)[0m
+2024.10.25 14:45:45 INFO  time: compiled root in 65ms[0m
+2024.10.25 14:45:52 INFO  compiling root (1 scala source)[0m
+2024.10.25 14:45:52 INFO  time: compiled root in 62ms[0m
+2024.10.25 14:45:52 INFO  compiling root (1 scala source)[0m
+2024.10.25 14:45:52 INFO  time: compiled root in 55ms[0m
+2024.10.25 14:45:57 INFO  compiling root (1 scala source)[0m
+2024.10.25 14:45:57 INFO  time: compiled root in 64ms[0m
+2024.10.25 14:46:01 INFO  compiling root (1 scala source)[0m
+2024.10.25 14:46:01 INFO  time: compiled root in 0.11s[0m
+2024.10.25 14:47:20 INFO  compiling root (1 scala source)[0m
+2024.10.25 14:47:20 INFO  time: compiled root in 0.17s[0m
+2024.10.25 14:47:20 INFO  compiling root (1 scala source)[0m
+2024.10.25 14:47:20 INFO  time: compiled root in 0.17s[0m
+2024.10.25 14:47:48 INFO  compiling root (2 scala sources)[0m
+2024.10.25 14:47:48 INFO  time: compiled root in 0.32s[0m
+2024.10.25 14:47:54 INFO  compiling root (1 scala source)[0m
+2024.10.25 14:47:54 INFO  time: compiled root in 0.33s[0m
+2024.10.25 14:48:00 INFO  compiling root (1 scala source)[0m
+2024.10.25 14:48:00 INFO  time: compiled root in 0.4s[0m
+2024.10.25 14:48:16 INFO  compiling root (1 scala source)[0m
+2024.10.25 14:48:16 INFO  time: compiled root in 0.25s[0m
+2024.10.25 14:48:20 INFO  compiling root (1 scala source)[0m
+2024.10.25 14:48:20 INFO  time: compiled root in 0.31s[0m
+2024.10.25 14:48:37 INFO  compiling root (1 scala source)[0m
+2024.10.25 14:48:37 INFO  time: compiled root in 0.48s[0m
+2024.10.25 14:49:02 INFO  compiling root (1 scala source)[0m
+2024.10.25 14:49:02 INFO  time: compiled root in 0.16s[0m
+2024.10.25 14:49:12 INFO  compiling root (1 scala source)[0m
+2024.10.25 14:49:12 INFO  time: compiled root in 0.14s[0m
+2024.10.25 15:05:58 INFO  compiling root (1 scala source)[0m
+2024.10.25 15:05:58 INFO  time: compiled root in 0.3s[0m
+2024.10.25 15:05:58 INFO  compiling root (1 scala source)[0m
+2024.10.25 15:05:58 INFO  time: compiled root in 0.16s[0m
+2024.10.25 15:06:11 INFO  time: compiled root in 33ms[0m
+2024.10.25 16:15:38 INFO  compiling root (1 scala source)[0m
+2024.10.25 16:15:38 INFO  time: compiled root in 0.24s[0m
+2024.10.25 16:15:46 INFO  time: compiled root in 6ms[0m
