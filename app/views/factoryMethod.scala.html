@@ -1,0 +1,27 @@
+@import patterns.factorymethod.*
+
+@()
+
+@main("Factory Method | Creational Patterns") {   
+    <h2>Factory Method</h2>
+    <h3>Example Scenario:</h3>
+    <p>You run a company where you have multiple types of products, but they all have the same properties to them.
+        
+    </p>
+    <p> This is the factory method in practice: </p>
+    @defining(FactoryMethodFactory(true)){ factoryMethodOne =>
+        <div class="factory-method">
+            <p>Object with a declaration name: <br />@factoryMethodOne.factoryName</p>
+        </div>
+    }
+    @defining(FactoryMethodFactory(false)){ factoryMethodTwo =>
+        <div class="factory-method">
+            <p>Object with a different declaration name: <br />@factoryMethodTwo.factoryName</p>
+        </div>
+    }
+    @defining(FactoryMethodFactory(true,Some("My Factory"))){ factoryMethodWithString =>
+        <div class="factory-method">
+            <p>Object with a String name: <br />@factoryMethodWithString.factoryName</p>
+        </div>
+    }
+}

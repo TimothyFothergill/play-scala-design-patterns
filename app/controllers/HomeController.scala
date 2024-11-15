@@ -22,7 +22,10 @@ class HomeController @Inject()(val controllerComponents: ControllerComponents) e
     Ok(views.html.index())
   }
 
-  def factory() = Action { implicit request: Request[AnyContent] =>
-    Ok(views.html.factory())
+  def factoryMethod() = Action { implicit request: Request[AnyContent] =>
+    Ok(views.html.factoryMethod())
+  }
+  def abstractFactory() = Action { implicit request: Request[AnyContent] =>
+    Ok(views.html.abstractFactory())
   }
 }
