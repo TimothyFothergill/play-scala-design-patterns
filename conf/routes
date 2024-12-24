@@ -4,11 +4,36 @@
 # ~~~~
 
 # An example controller showing a sample home page
-GET     /                           controllers.HomeController.index()
+GET     /                                   controllers.HomeController.index()
 
 # Each of these route entries are for the patterns only
-GET     /factory-method             controllers.HomeController.factoryMethod()
-GET     /abstract-factory           controllers.HomeController.abstractFactory()
+## Creational Pattern routes
+GET     /creational/factory-method          controllers.HomeController.factoryMethod()
+GET     /creational/abstract-factory        controllers.HomeController.abstractFactory()
+GET     /creational/builder                 controllers.HomeController.builder()
+GET     /creational/prototype               controllers.HomeController.prototype()
+GET     /creational/singleton               controllers.HomeController.singleton()
+
+## Structural Pattern routes
+GET     /structural/adapter                 controllers.HomeController.adapter()
+GET     /structural/bridge                  controllers.HomeController.bridge()
+GET     /structural/composite               controllers.HomeController.composite()
+GET     /structural/decorator               controllers.HomeController.decorator()
+GET     /structural/facade                  controllers.HomeController.facade()
+GET     /structural/flyweight               controllers.HomeController.flyweight()
+GET     /structural/proxy                   controllers.HomeController.proxy()
+
+## Behavioral Pattern routes
+GET     /behavioral/chainofresponsibility   controllers.HomeController.chainOfResponsibility()
+GET     /behavioral/command                 controllers.HomeController.command()
+GET     /behavioral/iterator                controllers.HomeController.iterator()
+GET     /behavioral/mediator                controllers.HomeController.mediator()
+GET     /behavioral/memento                 controllers.HomeController.memento()
+GET     /behavioral/observer                controllers.HomeController.observer()
+GET     /behavioral/state                   controllers.HomeController.state()
+GET     /behavioral/strategy                controllers.HomeController.strategy()
+GET     /behavioral/templatemethod          controllers.HomeController.templateMethod()
+GET     /behavioral/visitor                 controllers.HomeController.visitor()
 
 # Map static resources from the /public folder to the /assets URL path
-GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)
+GET     /assets/*file                       controllers.Assets.versioned(path="/public", file: Asset)

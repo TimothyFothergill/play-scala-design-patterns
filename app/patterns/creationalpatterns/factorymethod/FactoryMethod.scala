@@ -1,4 +1,4 @@
-package patterns.factorymethod
+package patterns.creationalpatterns.factorymethod
 
 sealed trait FactoryMethod {
     val factoryName: String
@@ -22,10 +22,9 @@ case class FactoryMethodWithString(factoryString: String) extends FactoryMethod 
 object FactoryMethodFactory {
     def apply(factoryChoice: Boolean, additionalChoices: Option[String] = None): FactoryMethod = { 
         (factoryChoice, additionalChoices) match {
-            case (true, Some(string))  => FactoryMethodWithString(string)
-            case (true, None)          => FactoryMethodOne()
-            case (false, Some(string)) => FactoryMethodWithString(string)
-            case (false, None)         => FactoryMethodTwo()
+            case (_,  Some(string))  => FactoryMethodWithString(string)
+            case (true, None)        => FactoryMethodOne()
+            case (false, None)       => FactoryMethodTwo()
         }
     }
 }
