@@ -1,1 +1,3 @@
 package patterns.behavioralpatterns.chainofresponsibility
+
+case class ChainOfResponsibility()

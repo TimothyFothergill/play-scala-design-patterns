@@ -5,29 +5,55 @@ sealed trait Animal {
     val legs: Int
     val foodType: FoodType
 
-    def noise(noise: String): String = "meep!"
+    def noise(noise: String = ""): String = "meep!"
 }
 
-sealed trait CatFactory {
+sealed trait AnimalFactory {
+    def createAnimal(animalType: String, animalName: String, isWild: Boolean = false): Animal
+}
+
+object GeneralAnimalFactory extends AnimalFactory {
+    override def createAnimal(animalType: String, animalName: String, isWild: Boolean = false): Animal = {
+        animalType.toLowerCase match {
+            case "cat" => {
+                isWild match {
+                    case false => CatFactory.createCat(animalName)
+                    case _ => CatFactory.createTiger(animalName)
+                }
+            }
+            case "dog" => {
+                isWild match {
+                    case false => OtherAnimalsFactory.createDog(animalName)
+                    case _ => OtherAnimalsFactory.createWolf(animalName)
+                }
+            }
+            case "fly" => OtherAnimalsFactory.createFly(animalName)
+            case "sheep" => OtherAnimalsFactory.createSheep(animalName)
+        }
+    }
+}
+
+object CatFactory {
     val houseCatNoise:  String = "Meow"
     val wildCatNoise:   String = "Rawr"
 
-    def createCalico(): Animal = Cat("Calico", houseCatNoise)
-    def createMoggy(): Animal = Cat("Moggy", houseCatNoise)
-    def createTiger(): Animal = Cat("Tiger", wildCatNoise, true)
+    def createCat(animalName: String): Animal = Cat(animalName, houseCatNoise)
+    def createTiger(animalName: String): Animal = Cat(animalName, wildCatNoise)
 }
 
-sealed trait OtherAnimalsFactory {
+object OtherAnimalsFactory {
     val dogNoise: String = "Woof"
+    val wolfNoise: String = "Grrr"
     val flyNoise: String = "Bzzz"
     val sheepNoise: String = "Baaa"
 
-    def createDog(): Animal = Dog("Golden Retriever", dogNoise)
-    def createFly(): Animal = Fly("Buzz", flyNoise)
-    def createDog(): Animal = Sheep("Fleece Witherspoon", sheepNoise)
+    def createDog(animalName: String): Animal = Dog(animalName, dogNoise)
+    def createFly(animalName: String): Animal = Fly(animalName, flyNoise)
+    def createSheep(animalName: String): Animal = Sheep(animalName, sheepNoise)
+    def createWolf(animalName: String): Animal = Dog(animalName, wolfNoise)
 }
 
-case class Cat(catName: String, catNoise: String, isWild: Boolean = false) extends Animal {
+case class Cat(catName: String, catNoise: String) extends Animal {
     override val name: String = catName
     val legs: Int = 4
     override val foodType: FoodType = Meat()
@@ -54,14 +80,14 @@ case class Fly(flyName: String, flyNoise: String) extends Animal {
 
 
 sealed trait FoodType {
-    val foodName: String
+    val name: String
 }
 case class Byproducts() extends FoodType {
-    override val foodName: String = "Animal byproducts"
+    override val name: String = "Animal byproducts"
 }
 case class Meat()       extends FoodType {
-    override val foodName: String = "Meat"
+    override val name: String = "Meat"
 }
 case class Vegetation() extends FoodType {
-    override val foodName: String = "Vegetation"
+    override val name: String = "Vegetation"
 }
