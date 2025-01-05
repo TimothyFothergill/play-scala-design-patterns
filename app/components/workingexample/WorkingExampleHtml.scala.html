@@ -1,0 +1,12 @@
+@import components.workingexample._
+
+@(params: WorkingExample)
+@import params._
+<div class="working-example">
+    @if(additionalInfo.nonEmpty) {
+
+    }
+    <div class="working-example-content">
+        @Html(content)
+    </div>
+</div>

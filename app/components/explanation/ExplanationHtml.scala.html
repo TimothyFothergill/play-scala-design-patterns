@@ -1,0 +1,12 @@
+@import components.explanation._
+
+@(params: Explanation)
+@import params._
+<div class="explanation">
+    @if(additionalInfo.nonEmpty) {
+
+    }
+    <div class="bad-example-content">
+        @Html(content)
+    </div>
+</div>
