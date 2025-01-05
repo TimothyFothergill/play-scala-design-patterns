@@ -1,0 +1,12 @@
+@import components.examplecode._
+
+@(params: ExampleCode)
+@import params._
+<div class="example-code">
+    @if(additionalInfo.nonEmpty) {
+
+    }
+    <div class="example-code-content">
+        @Html(content)
+    </div>
+</div>

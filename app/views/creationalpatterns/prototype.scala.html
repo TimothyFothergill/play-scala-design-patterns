@@ -1,16 +1,37 @@
-@import patterns.creationalpatterns.prototype
+@import patterns.creationalpatterns.prototype._
+@import components.explanation.html.ExplanationHtml
+@import components.explanation.Explanation
+@import components.examplecode.html.ExampleCodeHtml
+@import components.examplecode.ExampleCode
+@import components.workingexample.html.WorkingExampleHtml
+@import components.workingexample.WorkingExample
 
 @()
 
 @main("Prototype | Creational Patterns") {   
     <h3>Prototype</h3>
-    <div class="explanation">
-    
-    </div>
-    <div class="bad-example">
-    
-    </div>
-    <div class="working-example">
-    
-    </div>
+    @ExplanationHtml(Explanation(
+        None,
+        """
+        <p>
+            Imagine if you will that you have a widget creator and there are a lot of configurable parameters.<br>
+            The prototype pattern allows us to have a pre-built object, which end users can 'clone', a default of sorts.
+        </p>
+        """
+    ))
+    @ExampleCodeHtml(ExampleCode(
+        None,
+        """
+        
+        """
+    ))
+    <!-- @@WorkingExampleHtml(WorkingExample(
+        None,
+        """ -->
+        @defining(ShapePrototype.clone()){ shapeCloneOne => @shapeCloneOne.shapeName @Html(shapeCloneOne.shape.drawShape) }
+        @defining(ShapePrototype.clone()){ shapeCloneTwo => @shapeCloneTwo.shapeName @Html(shapeCloneTwo.shape.drawShape) }
+        @defining(ShapePrototype.clone()){ shapeCloneThree => @shapeCloneThree.shapeName @Html(shapeCloneThree.shape.drawShape) }
+        @defining(ShapePrototype.clone()){ shapeCloneFour => @shapeCloneFour.shapeName @Html(shapeCloneFour.shape.drawShape) }
+        <!-- """ -->
+    <!-- )) -->
 }

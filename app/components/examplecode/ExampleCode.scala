@@ -1,6 +1,6 @@
-package components.badexample
+package components.examplecode
 
-case class BadExample(
+case class ExampleCode(
     additionalInfo: Option[String] = None,
     content: String = "",
 )

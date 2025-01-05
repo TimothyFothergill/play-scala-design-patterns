@@ -1,14 +1,15 @@
 package patterns.creationalpatterns.builder
 
 case class EnemyBuilder private (
-    enemyName: String = "enemy",
-    enemyHealth: Float = 10.0,
-    enemyAttack: Int = 1,
-    enemyDefence: Int = 1,
-    enemyMagicAttack: Int = 1,
-    enemyRangedAttack: Int = 1,
-    enemyHasSpecialAttack: Boolean = false,
-    enemyDrops: Seq[EnemyDrops] = Seq()
+    enemyName: String               = "enemy",
+    enemyHealth: Float              = 10.0,
+    enemyAttack: Int                = 1,
+    enemyDefence: Int               = 1,
+    enemyMagicAttack: Int           = 1,
+    enemyRangedAttack: Int          = 1,
+    enemyHasSpecialAttack: Boolean  = false,
+    enemyIsType: EnemyType          = EnemyType.Human,
+    enemyDrops: Seq[EnemyDrop]      = Seq()
 ) {
     def withName(name: String)                  = { copy(enemyName = name)                  }
     def withHealth(health: Float)               = { copy(enemyHealth = health)              }
@@ -17,7 +18,8 @@ case class EnemyBuilder private (
     def withMagicAttack(magicAttack: Int)       = { copy(enemyMagicAttack = magicAttack)    }
     def withRangedAttack(rangedAttack: Int)     = { copy(enemyRangedAttack = rangedAttack)  }
     def withSpecialAttack(hasSpecial: Boolean)  = { copy(enemyHasSpecialAttack = hasSpecial)}
-    def withDrops(hasDrops: Seq[EnemyDrops])    = { copy(enemyDrops = hasDrops)             }
+    def withEnemyType(enemyType: EnemyType)     = { copy(enemyIsType = enemyType)           }
+    def withDrops(hasDrops: Seq[EnemyDrop])     = { copy(enemyDrops = hasDrops)             }
 
     def build() = Enemy(
         enemyName = enemyName,
@@ -27,6 +29,7 @@ case class EnemyBuilder private (
         enemyMagicAttack = enemyMagicAttack,
         enemyRangedAttack = enemyRangedAttack,
         enemyHasSpecialAttack = enemyHasSpecialAttack,
+        enemyIsType = enemyIsType,
         enemyDrops = enemyDrops
     )
 }
@@ -43,10 +46,27 @@ case class Enemy(
     enemyMagicAttack: Int,
     enemyRangedAttack: Int,
     enemyHasSpecialAttack: Boolean,
-    enemyDrops: Seq[EnemyDrops]
+    enemyIsType: EnemyType,
+    enemyDrops: Seq[EnemyDrop]
 )
 
-case class EnemyDrops(
+sealed trait EnemyType {
+    def icon: String = ""
+    def typeName: String = ""
+}
+
+object EnemyType {
+    case object Human extends EnemyType {
+        override def icon: String = "human.png"
+        override def typeName: String = "Human"
+    }
+    case object Goblin extends EnemyType {
+        override def icon: String = "goblin.png"
+        override def typeName: String = "Goblin"
+    }
+}
+
+case class EnemyDrop(
     dropName: String = "item",
     dropQuantity: Int = 1
 )
