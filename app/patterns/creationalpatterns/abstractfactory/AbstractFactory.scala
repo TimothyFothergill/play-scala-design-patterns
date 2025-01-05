@@ -6,6 +6,7 @@ sealed trait Animal {
     val foodType: FoodType
 
     def noise(noise: String = ""): String = "meep!"
+    def makeNoise(): String
 }
 
 sealed trait AnimalFactory {
@@ -57,25 +58,39 @@ case class Cat(catName: String, catNoise: String) extends Animal {
     override val name: String = catName
     val legs: Int = 4
     override val foodType: FoodType = Meat()
-    override def noise(catNoise: String): String = if(catNoise.nonEmpty){catNoise}else{"Meow"}
+    override def noise(catNoise: String): String = catNoise
+    
+    override def makeNoise(): String = catNoise
 }
 
 case class Dog(dogName: String, dogNoise: String) extends Animal {
     override val name: String = dogName
     override val legs: Int = 4
     override val foodType: FoodType = Meat()
+
+    override def noise(dogNoise: String): String = dogNoise
+    
+    override def makeNoise(): String = dogNoise
 }
 
 case class Sheep(sheepName: String, sheepNoise: String) extends Animal {
     override val name: String = sheepName
     override val legs: Int = 4
     override val foodType: FoodType = Vegetation()
+
+    override def noise(sheepNoise: String): String = sheepNoise
+    
+    override def makeNoise(): String = sheepNoise
 }
 
 case class Fly(flyName: String, flyNoise: String) extends Animal {
     override val name: String = flyName
     override val legs: Int = 6
     override val foodType: FoodType = Byproducts()
+
+    override def noise(flyNoise: String): String = flyNoise
+    
+    override def makeNoise(): String = flyNoise
 }
 
 

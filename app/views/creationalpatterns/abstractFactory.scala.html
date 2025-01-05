@@ -4,19 +4,24 @@
 
 @main("Abstract Factory | Creational Patterns") {   
     <h3>Abstract Factory</h3>
-    <p>
-        Abstract factories are often the step up from the original Factory Method.<br>
-
-        Below we have a few different 'animals': Cat, Dog, Fly and Sheep. Don't ask me why I chose these, I just did.<br>
-
-        Now, if I'm expecting to make a bunch of Cat subtypes, I can make a factory just for those - Let's call that `CatFactory`.
-    </p>
-    @defining(GeneralAnimalFactory.createAnimal("cat", "kitty")) { kitty => 
-        Stats about @kitty.name
-        <div class="kitty">
-            <p>@kitty.name</p>
-            <p>"@kitty.noise()" says @kitty.name</p>
-            <p>@kitty.name likes to eat @kitty.foodType.name</p>
-        </div>
-    }
+    <div class="explanation">
+        <p>
+            Abstract factories are often the step up from the original Factory Method.<br>
+            Below we have a few different 'animals': Cat, Dog, Fly and Sheep. Don't ask me why I chose these, I just did.<br>
+            Now, if I'm expecting to make a bunch of Cat subtypes, I can make a factory just for those - Let's call that `CatFactory`.
+        </p>
+    </div>
+    <div class="bad-example">
+    
+    </div>
+    <div class="working-example">
+        @defining(GeneralAnimalFactory.createAnimal("cat", "kitty")) { kitty => 
+            Stats about @kitty.name
+            <div class="kitty">
+                <p>@kitty.name</p>
+                <p>"@kitty.noise()" says @kitty.name</p>
+                <p>@kitty.name likes to eat @kitty.foodType.name</p>
+            </div>
+        }
+    </div>
 }

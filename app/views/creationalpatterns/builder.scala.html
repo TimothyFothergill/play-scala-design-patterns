@@ -1,8 +1,43 @@
-@import patterns.creationalpatterns.builder
+@import patterns.creationalpatterns.builder._
+@import components.explanation.html.ExplanationHtml
+@import components.explanation.Explanation
+@import components.badexample.html.BadExampleHtml
+@import components.badexample.BadExample
+@import components.workingexample.html.WorkingExampleHtml
+@import components.workingexample.WorkingExample
 
 @()
 
 @main("Builder | Creational Patterns") {   
     <h3>Builder</h3>
 
+    @ExplanationHtml(Explanation(
+        None,
+        """
+        <p>
+            The builder pattern is useful when you need to construct complicated objects with many parameters. <br>
+            In these examples, we're going to take the concept of RPG enemies and how we can build them up using the Builder pattern.
+        </p>
+        """
+    ))
+    @BadExampleHtml(BadExample(
+        None,
+        ""
+    ))
+    <!-- @@WorkingExampleHtml(WorkingExample(
+        None,
+        """ -->
+        <p>
+            @defining(
+                EnemyBuilder()
+                    .withName("Fred")
+                    .withHealth(100.0)
+                    .withAttack(5)
+                    .build()
+                ){ fred => 
+                    @fred.enemyName
+                }
+        </p>
+        <!-- """ -->
+    <!-- )) -->
 }
