@@ -3,7 +3,6 @@ package patterns.creationalpatterns
 import org.scalatest._
 import flatspec._
 import matchers._
-import patterns.creationalpatterns.factorymethod.FactoryMethodFactory
 import patterns.creationalpatterns.abstractfactory._
 
 class AbstractFactorySpec extends AnyFlatSpec with should.Matchers {

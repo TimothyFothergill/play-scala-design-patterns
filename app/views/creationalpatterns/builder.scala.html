@@ -1,8 +1,8 @@
 @import patterns.creationalpatterns.builder._
 @import components.explanation.html.ExplanationHtml
 @import components.explanation.Explanation
-@import components.badexample.html.BadExampleHtml
-@import components.badexample.BadExample
+@import components.examplecode.html.ExampleCodeHtml
+@import components.examplecode.ExampleCode
 @import components.workingexample.html.WorkingExampleHtml
 @import components.workingexample.WorkingExample
 
@@ -20,14 +20,18 @@
         </p>
         """
     ))
-    @BadExampleHtml(BadExample(
+    @ExampleCodeHtml(ExampleCode(
         None,
-        ""
+        """EnemyBuilder()<br>
+        .withName("Fred")<br>
+        .withHealth(100.0)<br>
+        .withAttack(5)<br>
+        .build()"""
     ))
     <!-- @@WorkingExampleHtml(WorkingExample(
         None,
         """ -->
-        <p>
+        <div class="enemy">
             @defining(
                 EnemyBuilder()
                     .withName("Fred")
@@ -35,9 +39,56 @@
                     .withAttack(5)
                     .build()
                 ){ fred => 
-                    @fred.enemyName
+                    <div class="enemy-icon">
+                        @defining(fred.enemyIsType.icon) { icon => 
+                            <img src=@routes.Assets.versioned("images/builder/" + icon) height="32px" width="32px">
+                        }
+                    </div>
+                    Name: @fred.enemyName<br>
+                    HP: @fred.enemyHealth<br>
+                    Atk: @fred.enemyAttack
+                    Def: @fred.enemyDefence
+                    Mag: @fred.enemyMagicAttack
+                    Dex: @fred.enemyRangedAttack<br>
+                    Spec: @fred.enemyHasSpecialAttack<br>
+                    Type: @fred.enemyIsType<br>
+                    Drops: @fred.enemyDrops<br>
                 }
-        </p>
+        </div>
+        <div class="enemy">
+            @defining(
+                EnemyBuilder()
+                    .withName("Gobbo")
+                    .withHealth(150.0)
+                    .withAttack(6)
+                    .withDefence(5)
+                    .withMagicAttack(5)
+                    .withRangedAttack(1)
+                    .withSpecialAttack(true)
+                    .withEnemyType(EnemyType.Goblin)
+                    .withDrops(Seq(
+                        EnemyDrop(dropName = "Potion of Potioning", dropQuantity = 5)
+                    ))
+                    .build()
+                ){ fred => 
+                    <div class="enemy-icon">
+                        @defining(fred.enemyIsType.icon) { icon => 
+                            <img src=@routes.Assets.versioned("images/builder/" + icon) height="32px" width="32px">
+                        }
+                    </div>
+                    Name: @fred.enemyName<br>
+                    HP: @fred.enemyHealth<br>
+                    Atk: @fred.enemyAttack
+                    Def: @fred.enemyDefence
+                    Mag: @fred.enemyMagicAttack
+                    Dex: @fred.enemyRangedAttack<br>
+                    Spec: @fred.enemyHasSpecialAttack<br>
+                    Type: @fred.enemyIsType<br>
+                    Drops: @fred.enemyDrops<br>
+                }
+        </div>
         <!-- """ -->
     <!-- )) -->
+
+<p>Enemy icons by <a href="https://game-icons.net/1x1/delapouite/goblin-head.html">game-icons.net</a>, under <a href="https://creativecommons.org/licenses/by/3.0/">CC by 3.0</a>. No additional changes were made to the icons.</p>
 }
