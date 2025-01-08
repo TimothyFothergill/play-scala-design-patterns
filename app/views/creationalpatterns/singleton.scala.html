@@ -1,16 +1,35 @@
-@import patterns.creationalpatterns.singleton
+@import patterns.creationalpatterns.singleton._
 
+@import components.explanation.html.ExplanationHtml
+@import components.explanation.Explanation
+@import components.examplecode.html.ExampleCodeHtml
+@import components.examplecode.ExampleCode
+@import components.workingexample.html.WorkingExampleHtml
+@import components.workingexample.WorkingExample
 @()
 
 @main("Singleton | Creational Patterns") {   
     <h3>Singleton</h3>
-    <div class="explanation">
-    
-    </div>
+    @ExplanationHtml(Explanation(
+        None,
+        """
+        <p>
+            A Singleton is where you want to make sure there is only one of an object.
+            In Scala, we just have to declare an for a class and this acts as a singleton from the offset.
+            In the below example, we have a list of products all coming from a listProducts method.
+            We can add to the list with the addProduct method and it'll be retained.
+        </p>
+        """
+    ))
     <div class="bad-example">
     
     </div>
     <div class="working-example">
-    
+        @ProductsSingleton.addProduct(Product(
+            productId = 5,
+            productName = "Quackers: Duck Shaped Crackers",
+            productPrice = 3.99
+        ))
+        @Html(ProductsSingleton.listProducts)
     </div>
 }
