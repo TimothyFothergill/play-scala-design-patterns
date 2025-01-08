@@ -10,6 +10,4 @@ class PrototypeSpec extends AnyFlatSpec with should.Matchers {
         val clonedShape = ShapePrototype.clone()
         clonedShape.shapeDescription shouldBe "A Red Square"
     }
-
-
 }
