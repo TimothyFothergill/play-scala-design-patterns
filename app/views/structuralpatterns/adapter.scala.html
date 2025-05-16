@@ -1,8 +1,58 @@
-@import patterns.structuralpatterns.adapter
+@import patterns.structuralpatterns.adapter._
+@import patterns.structuralpatterns.adapter.Shape._
+
+@import components.explanation.html.ExplanationHtml
+@import components.explanation.Explanation
+@import components.examplecode.html.ExampleCodeHtml
+@import components.examplecode.ExampleCode
+@import components.workingexample.html.WorkingExampleHtml
+@import components.workingexample.WorkingExample
 
 @()
 
 @main("Adapter | Structural Patterns") {   
     <h3>Adapter</h3>
+    @ExplanationHtml(Explanation(
+        None,
+        """
+        <p>
+            Your client is asking for a triangle, but has given you the dimensions for a circle. <br>
+            You can use the adapter pattern to give them a circle, but has the information of the triangle. <br>
+            A better use case for this pattern is if your client has a file format which doesn't work with your application, <br>
+            but hopefully you get the idea with these shapes.
+        </p>
+        """
+    ))
+    @ExampleCodeHtml(ExampleCode(
+        None,
+        """
+        val triangle = Triangle
+        val adaptedShape = ShapeAdapter.adaptedShape(triangle.shapeName, 4, 5, 10)
+        adaptedShape.shapeName // "rectangle"
+        """
+    ))
+    <div class="shape">
+        @defining(Triangle){ triangle => 
+            @defining(ShapeAdapter.adaptedShape(triangle.shapeName, 4, 5, 10)){ adaptedShape =>
+                <hr>
+                <p><strong>Original shape:</strong> @triangle</p>
+                <p><strong>Passed in:</strong> "@triangle.shapeName" with 4 sides, 5 height and 10 width</p>
+                <p><strong>Received:</strong> @adaptedShape with shapeName @adaptedShape.shapeName</p>
+            }
+        }
+        @defining(Circle){ circle => 
+            @defining(ShapeAdapter.adaptedShape(circle.shapeName, 0, 10, 10)){ adaptedShape =>
+                <hr>
+                <p><strong>Original shape:</strong> @circle</p>
+                <p><strong>Passed in:</strong> "@circle.shapeName" with 0 sides, 10 height and 10 width</p>
+                <p><strong>Received:</strong> @adaptedShape with shapeName @adaptedShape.shapeName</p>
+            }
+        }
+        @defining(ShapeAdapter.adaptedShape("a fake shape", 3, 10, 10)){ adaptedShape =>
+            <hr>
+            <p><strong>Passed in:</strong> "a fake shape" with 3 sides, 10 height and 10 width</p>
+            <p><strong>Received:</strong> @adaptedShape with shapeName @adaptedShape.shapeName</p>
+        }
+       </div>
 
 }
